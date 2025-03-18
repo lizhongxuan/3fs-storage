@@ -1,0 +1,21 @@
+storage:
+  node:
+    id: "node1"
+    listen_address: "0.0.0.0:7000"
+  
+  cluster:
+    nodes:
+      - id: "node1"
+        address: "127.0.0.1:7000"
+      - id: "node2"
+        address: "127.0.0.1:7001"
+      - id: "node3"
+        address: "127.0.0.1:7002"
+  
+  replication:
+    factor: 3
+    chain_length: 3
+  
+  local:
+    data_path: "./data"
+    max_space_gb: 100 
